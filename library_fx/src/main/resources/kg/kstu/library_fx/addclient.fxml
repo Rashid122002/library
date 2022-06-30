@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="548.0" prefWidth="370.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kg.kstu.library_fx.controller.AddClientController">
+   <children>
+      <Pane prefHeight="81.0" prefWidth="370.0" style="-fx-background-color: #1F618D;">
+         <children>
+            <Label fx:id="labelHeader" layoutX="14.0" layoutY="12.0" prefHeight="57.0" prefWidth="339.0" text="     Форма читателя" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold Italic" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <TextField fx:id="txtFirstName" layoutX="54.0" layoutY="107.0" prefHeight="26.0" prefWidth="262.0" promptText="Имя" />
+      <TextField fx:id="txtLastName" layoutX="54.0" layoutY="151.0" prefHeight="26.0" prefWidth="262.0" promptText="Фамилия" />
+      <TextField fx:id="txtMiddleName" layoutX="54.0" layoutY="196.0" prefHeight="26.0" prefWidth="262.0" promptText="Отчество" />
+      <CheckBox fx:id="maleCheckBox" layoutX="54.0" layoutY="244.0" mnemonicParsing="false" text="Мужской" />
+      <CheckBox fx:id="FemaleCheckBox" layoutX="148.0" layoutY="244.0" mnemonicParsing="false" text="Женский" />
+      <DatePicker fx:id="dob" layoutX="54.0" layoutY="282.0" prefHeight="26.0" prefWidth="262.0" promptText="Дата рождения" />
+      <TextField fx:id="address" layoutX="53.0" layoutY="328.0" prefHeight="26.0" prefWidth="262.0" promptText="Адрес" />
+      <TextField fx:id="phoneNumber" layoutX="53.0" layoutY="372.0" prefHeight="26.0" prefWidth="262.0" promptText="Номер телефона" />
+      <TextField fx:id="inn" layoutX="53.0" layoutY="417.0" prefHeight="26.0" prefWidth="262.0" promptText="ИНН" />
+      <Button fx:id="buttonAdd" layoutX="55.0" layoutY="503.0" mnemonicParsing="false" onAction="#buttonAddClick" prefHeight="26.0" prefWidth="112.0" style="-fx-background-color: #273746;" text="Добавить" textFill="WHITE" />
+      <Button fx:id="buttonCancel" layoutX="204.0" layoutY="503.0" mnemonicParsing="false" onAction="#buttonCancelClick" prefHeight="26.0" prefWidth="112.0" style="-fx-background-color: #273746;" text="Отмена" textFill="WHITE" />
+      <TextField fx:id="blackListTxt" layoutX="54.0" layoutY="459.0" prefHeight="26.0" prefWidth="262.0" promptText="Блэк-лист" visible="false" />
+   </children>
+</AnchorPane>

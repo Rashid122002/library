@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="650.0" prefWidth="918.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kg.kstu.library_fx.controller.MainpageController">
+   <children>
+      <Pane prefHeight="109.0" prefWidth="950.0" style="-fx-background-color: #273746;">
+         <children>
+            <ImageView fitHeight="92.0" fitWidth="98.0" layoutX="33.0" layoutY="9.0">
+               <image>
+                  <Image url="@images/logo1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="98.0" fitWidth="200.0" layoutX="138.0" layoutY="6.0">
+               <image>
+                  <Image url="@images/logotext.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutY="110.0" prefHeight="541.0" prefWidth="218.0" style="-fx-background-color: #5499C7;">
+         <children>
+            <Button fx:id="buttonClients" mnemonicParsing="false" onAction="#buttonClientsClick" prefHeight="70.0" prefWidth="218.0" style="-fx-background-color: #5499C7; -fx-border-color: white;" text="Читатели" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold Italic" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="buttonBooks" layoutY="70.0" mnemonicParsing="false" onAction="#buttonBooksClick" prefHeight="70.0" prefWidth="218.0" style="-fx-background-color: #5499C7; -fx-border-color: white;" text="Книги" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold Italic" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="buttonAuthors" layoutY="140.0" mnemonicParsing="false" onAction="#buttonAuthorsClick" prefHeight="70.0" prefWidth="218.0" style="-fx-background-color: #5499C7; -fx-border-color: white;" text="Авторы" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold Italic" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="buttonOrders" layoutY="210.0" mnemonicParsing="false" onAction="#buttonOrdersClick" prefHeight="70.0" prefWidth="218.0" style="-fx-background-color: #5499C7; -fx-border-color: white;" text="Заказы" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold Italic" size="16.0" />
+               </font>
+            </Button>
+            <Button fx:id="buttonSettings" layoutY="472.0" mnemonicParsing="false" onAction="#buttonSettingsClick" prefHeight="70.0" prefWidth="218.0" style="-fx-background-color: #5499C7; -fx-border-color: white;" text="Настройки" textFill="WHITE">
+               <font>
+                  <Font name="Calibri Bold Italic" size="16.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="218.0" layoutY="110.0" prefHeight="70.0" prefWidth="732.0" style="-fx-background-color: #1F618D;">
+         <children>
+            <Label fx:id="labelHeader" layoutX="14.0" prefHeight="57.0" prefWidth="280.0" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold Italic" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <ToolBar layoutX="218.0" layoutY="611.0" prefHeight="40.0" prefWidth="732.0" style="-fx-background-color: white;">
+        <items>
+          <Button fx:id="buttonAdd" mnemonicParsing="false" onAction="#buttonAddClick" prefHeight="26.0" prefWidth="112.0" style="-fx-background-color: #273746;" text="Добавить" textFill="WHITE" />
+            <Button fx:id="buttonChange" mnemonicParsing="false" onAction="#buttonChangeClick" prefHeight="26.0" prefWidth="112.0" style="-fx-background-color: #273746;" text="Редактировать" textFill="WHITE" />
+            <Button fx:id="buttonDelete" mnemonicParsing="false" onAction="#buttonDeleteClick" prefHeight="26.0" prefWidth="112.0" style="-fx-background-color: #273746;" text="Удалить" textFill="WHITE" />
+            <Button fx:id="buttonUpdate" mnemonicParsing="false" onAction="#buttonUpdateClick" prefHeight="26.0" prefWidth="112.0" style="-fx-background-color: #273746;" text="Обновить" textFill="WHITE" />
+        </items>
+      </ToolBar>
+      <TextField fx:id="txtSearch" layoutX="228.0" layoutY="189.0" prefHeight="26.0" prefWidth="443.0" />
+      <Button fx:id="buttonSearch" layoutX="754.0" layoutY="189.0" mnemonicParsing="false" onAction="#buttonSearchClick" prefHeight="26.0" prefWidth="186.0" style="-fx-background-color: #273746;" text="Найти" textFill="WHITE" />
+      <TableView fx:id="clientTableView" editable="true" layoutX="227.0" layoutY="222.0" prefHeight="380.0" prefWidth="714.0" visible="false">
+         <columns>
+            <TableColumn fx:id="id_column" prefWidth="84.80000305175781" text="ID" />
+            <TableColumn fx:id="first_name_column" prefWidth="104.0" text="Имя" />
+            <TableColumn fx:id="last_name_column" prefWidth="104.0" text="Фамилия" />
+            <TableColumn fx:id="middle_name_column" prefWidth="104.0" text="Отчество" />
+            <TableColumn fx:id="gender" prefWidth="104.0" text="Пол" />
+            <TableColumn fx:id="dob_column" prefWidth="104.0" text="Дата рождения" />
+            <TableColumn fx:id="address_column" prefWidth="104.0" text="Адрес" />
+            <TableColumn fx:id="phone_number_column" prefWidth="104.0" text="Номер" />
+            <TableColumn fx:id="passport_id_column" prefWidth="104.0" text="ИНН" />
+            <TableColumn fx:id="ticket_column" prefWidth="104.0" text="Чит. билет" />
+            <TableColumn fx:id="black_list_column" prefWidth="104.0" text="Блэк-лист" />
+         </columns>
+      </TableView>
+      <TableView fx:id="boolTableView" editable="true" layoutX="227.0" layoutY="222.0" prefHeight="380.0" prefWidth="714.0" visible="false">
+         <columns>
+            <TableColumn fx:id="book_id_column" prefWidth="84.80000305175781" text="ID" />
+            <TableColumn fx:id="book_author_id_column" prefWidth="104.0" text="Автор" />
+            <TableColumn fx:id="name_column" prefWidth="104.0" text="Название" />
+            <TableColumn fx:id="description" prefWidth="104.0" text="Описание" />
+            <TableColumn fx:id="publishing_house" prefWidth="104.0" text="Издание" />
+            <TableColumn fx:id="date_of_publication" prefWidth="104.0" text="Дата издания" />
+            <TableColumn fx:id="pages" prefWidth="104.0" text="Кол-во страниц" />
+            <TableColumn fx:id="status" prefWidth="104.0" text="Статус" />
+         </columns>
+      </TableView>
+      <TableView fx:id="authorTableView" editable="true" layoutX="227.0" layoutY="222.0" prefHeight="380.0" prefWidth="714.0" visible="false">
+         <columns>
+            <TableColumn fx:id="author_id" prefWidth="84.80000305175781" text="ID" />
+            <TableColumn fx:id="author_name" prefWidth="104.0" text="Имя" />
+            <TableColumn fx:id="author_last_name" prefWidth="104.0" text="Фамилия" />
+            <TableColumn fx:id="author_middle_name" prefWidth="104.0" text="Отчество" />
+         </columns>
+      </TableView>
+      <TableView fx:id="ordertTableView" editable="true" layoutX="227.0" layoutY="222.0" prefHeight="380.0" prefWidth="714.0" visible="false">
+         <columns>
+            <TableColumn fx:id="order_id" prefWidth="84.80000305175781" text="ID" />
+            <TableColumn fx:id="client_id" prefWidth="104.0" text="Читатель" />
+            <TableColumn fx:id="book_id" prefWidth="104.0" text="Книга" />
+            <TableColumn fx:id="date_of_issue" prefWidth="104.0" text="Дата заказа" />
+            <TableColumn fx:id="date_of_deadline" prefWidth="104.0" text="Срок сдачи" />
+         </columns>
+      </TableView>
+   </children>
+</AnchorPane>

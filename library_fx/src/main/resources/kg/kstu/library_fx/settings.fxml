@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="430.0" prefWidth="508.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kg.kstu.library_fx.controller.SettingsController">
+   <children>
+      <Pane prefHeight="70.0" prefWidth="533.0" style="-fx-background-color: #1F618D;">
+         <children>
+            <Label fx:id="labelHeader" layoutX="176.0" layoutY="7.0" prefHeight="57.0" prefWidth="182.0" text="Настройки" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold Italic" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <TextField fx:id="oldPwd" layoutX="127.0" layoutY="152.0" prefHeight="26.0" prefWidth="280.0" />
+      <TextField fx:id="newPwd" layoutX="127.0" layoutY="208.0" prefHeight="26.0" prefWidth="280.0" />
+      <Label fx:id="labelHeader1" layoutX="169.0" layoutY="84.0" prefHeight="39.0" prefWidth="195.0" text="&lt;    Смена пароля    &gt;">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="127.0" layoutY="129.0" text="Старый пароль:" />
+      <Label layoutX="127.0" layoutY="186.0" text="Новый пароль:" />
+      <Button fx:id="buttonChange" layoutX="127.0" layoutY="257.0" mnemonicParsing="false" onAction="#buttonChangeClick" prefHeight="26.0" prefWidth="108.0" style="-fx-background-color: #273746;" text="Сменить" textFill="WHITE" />
+      <Button fx:id="buttonCancel" layoutX="299.0" layoutY="257.0" mnemonicParsing="false" onAction="#buttonCancelClick" prefHeight="26.0" prefWidth="108.0" style="-fx-background-color: #273746;" text="Отмена" textFill="WHITE" />
+      <Label fx:id="labelHeader11" layoutX="148.0" layoutY="316.0" prefHeight="39.0" prefWidth="238.0" text="&lt;    Выход из системы    &gt;">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="LogOut" layoutX="191.0" layoutY="369.0" mnemonicParsing="false" onAction="#LogOutClick" prefHeight="26.0" prefWidth="150.0" style="-fx-background-color: #273746;" text="Выйти" textFill="WHITE" />
+   </children>
+</AnchorPane>

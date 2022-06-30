@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="301.0" prefWidth="370.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="kg.kstu.library_fx.controller.AddAuthorController">
+   <children>
+      <Pane prefHeight="81.0" prefWidth="370.0" style="-fx-background-color: #1F618D;">
+         <children>
+            <Label fx:id="labelHeader" layoutX="14.0" layoutY="12.0" prefHeight="57.0" prefWidth="339.0" text="       Форма автора" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold Italic" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <TextField fx:id="txtFirstName" layoutX="54.0" layoutY="107.0" prefHeight="26.0" prefWidth="262.0" promptText="Имя" />
+      <TextField fx:id="txtLastName" layoutX="54.0" layoutY="151.0" prefHeight="26.0" prefWidth="262.0" promptText="Фамилия" />
+      <TextField fx:id="txtMiddleName" layoutX="54.0" layoutY="196.0" prefHeight="26.0" prefWidth="262.0" promptText="Отчество" />
+      <Button fx:id="buttonAdd" layoutX="54.0" layoutY="251.0" mnemonicParsing="false" onAction="#buttonAddClick" prefHeight="26.0" prefWidth="112.0" style="-fx-background-color: #273746;" text="Добавить" textFill="WHITE" />
+      <Button fx:id="buttonCancel" layoutX="204.0" layoutY="251.0" mnemonicParsing="false" onAction="#buttonCancelClick" prefHeight="26.0" prefWidth="112.0" style="-fx-background-color: #273746;" text="Отмена" textFill="WHITE" />
+   </children>
+</AnchorPane>
